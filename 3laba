@@ -1,0 +1,31 @@
+// Получение исходных данных из TextBox
+            double x=Convert.ToDouble(textBox2.Text);
+            double y=Convert.ToDouble(textBox1.Text);
+            
+            // Ввод исходных данных в окно результатов
+           
+            
+              
+                
+            textBox3.Text+="При X="+textBox2.Text+
+                Environment.NewLine;
+            textBox3.Text+="При Y="+textBox1.Text+
+                Environment.NewLine;
+           
+            // Вычисление выражения
+            double a = 1;
+            if ((x * y) > 0)
+                a = ((x * x + y) * (x * x + y) - Math.Sqrt(x*x*y));
+            if ((x * y) < 0)
+                a = ((x * x + y) * (x * x + y) - Math.Sqrt(Math.Abs(x * x * y)));
+            if ((x * y) == 0)
+                a = ((x * x + y) * (x * x + y) + 1);
+
+
+
+            // Вывод результата
+            textBox3.Text += "a = " + a.ToString();
+               
+        }
+    }
+}
